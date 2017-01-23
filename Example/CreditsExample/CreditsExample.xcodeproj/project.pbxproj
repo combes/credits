@@ -11,6 +11,8 @@
 		830BEB341E354278005659A0 /* license-body.html in Resources */ = {isa = PBXBuildFile; fileRef = 830BEB331E354278005659A0 /* license-body.html */; };
 		830BEB361E35454C005659A0 /* license-content.html in Resources */ = {isa = PBXBuildFile; fileRef = 830BEB351E35454C005659A0 /* license-content.html */; };
 		830BEB381E3551B1005659A0 /* licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 830BEB371E3551B1005659A0 /* licenses.plist */; };
+		835B50AF1E36A84900F11668 /* LicenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B50AE1E36A84900F11668 /* LicenseParser.swift */; };
+		835B50B71E36ABE500F11668 /* LicenseParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B50B61E36ABE500F11668 /* LicenseParserTests.swift */; };
 		835FFC5A1E3405C40096D4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835FFC591E3405C40096D4C8 /* AppDelegate.swift */; };
 		835FFC5C1E3405C40096D4C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835FFC5B1E3405C40096D4C8 /* ViewController.swift */; };
 		835FFC5F1E3405C40096D4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835FFC5D1E3405C40096D4C8 /* Main.storyboard */; };
@@ -18,11 +20,25 @@
 		835FFC641E3405C40096D4C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835FFC621E3405C40096D4C8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		835B50B91E36ABE500F11668 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 835FFC4E1E3405C40096D4C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 835FFC551E3405C40096D4C8;
+			remoteInfo = CreditsExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		830BEB311E353302005659A0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		830BEB331E354278005659A0 /* license-body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "license-body.html"; sourceTree = "<group>"; };
 		830BEB351E35454C005659A0 /* license-content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "license-content.html"; sourceTree = "<group>"; };
 		830BEB371E3551B1005659A0 /* licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = licenses.plist; sourceTree = "<group>"; };
+		835B50AE1E36A84900F11668 /* LicenseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseParser.swift; sourceTree = "<group>"; };
+		835B50B41E36ABE500F11668 /* CreditsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreditsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		835B50B61E36ABE500F11668 /* LicenseParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseParserTests.swift; sourceTree = "<group>"; };
+		835B50B81E36ABE500F11668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835FFC561E3405C40096D4C8 /* CreditsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835FFC591E3405C40096D4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		835FFC5B1E3405C40096D4C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +49,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		835B50B11E36ABE500F11668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		835FFC531E3405C40096D4C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +66,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		835B50B51E36ABE500F11668 /* CreditsExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				835B50B61E36ABE500F11668 /* LicenseParserTests.swift */,
+				835B50B81E36ABE500F11668 /* Info.plist */,
+			);
+			path = CreditsExampleTests;
+			sourceTree = "<group>";
+		};
 		835FFC4D1E3405C40096D4C8 = {
 			isa = PBXGroup;
 			children = (
 				835FFC581E3405C40096D4C8 /* Source */,
+				835B50B51E36ABE500F11668 /* CreditsExampleTests */,
 				835FFC571E3405C40096D4C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				835FFC561E3405C40096D4C8 /* CreditsExample.app */,
+				835B50B41E36ABE500F11668 /* CreditsExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +101,7 @@
 				835FFC591E3405C40096D4C8 /* AppDelegate.swift */,
 				835FFC5B1E3405C40096D4C8 /* ViewController.swift */,
 				830BEB311E353302005659A0 /* WebViewController.swift */,
+				835B50AE1E36A84900F11668 /* LicenseParser.swift */,
 				835FFC5D1E3405C40096D4C8 /* Main.storyboard */,
 				835FFC601E3405C40096D4C8 /* Assets.xcassets */,
 				835FFC621E3405C40096D4C8 /* LaunchScreen.storyboard */,
@@ -80,6 +115,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		835B50B31E36ABE500F11668 /* CreditsExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835B50BB1E36ABE500F11668 /* Build configuration list for PBXNativeTarget "CreditsExampleTests" */;
+			buildPhases = (
+				835B50B01E36ABE500F11668 /* Sources */,
+				835B50B11E36ABE500F11668 /* Frameworks */,
+				835B50B21E36ABE500F11668 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				835B50BA1E36ABE500F11668 /* PBXTargetDependency */,
+			);
+			name = CreditsExampleTests;
+			productName = CreditsExampleTests;
+			productReference = 835B50B41E36ABE500F11668 /* CreditsExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		835FFC551E3405C40096D4C8 /* CreditsExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 835FFC681E3405C40096D4C8 /* Build configuration list for PBXNativeTarget "CreditsExample" */;
@@ -107,6 +160,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Christopher Combes";
 				TargetAttributes = {
+					835B50B31E36ABE500F11668 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 835FFC551E3405C40096D4C8;
+					};
 					835FFC551E3405C40096D4C8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -127,11 +185,19 @@
 			projectRoot = "";
 			targets = (
 				835FFC551E3405C40096D4C8 /* CreditsExample */,
+				835B50B31E36ABE500F11668 /* CreditsExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		835B50B21E36ABE500F11668 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		835FFC541E3405C40096D4C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,17 +214,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		835B50B01E36ABE500F11668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835B50B71E36ABE500F11668 /* LicenseParserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		835FFC521E3405C40096D4C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				835FFC5C1E3405C40096D4C8 /* ViewController.swift in Sources */,
 				830BEB321E353302005659A0 /* WebViewController.swift in Sources */,
+				835B50AF1E36A84900F11668 /* LicenseParser.swift in Sources */,
 				835FFC5A1E3405C40096D4C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		835B50BA1E36ABE500F11668 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 835FFC551E3405C40096D4C8 /* CreditsExample */;
+			targetProxy = 835B50B91E36ABE500F11668 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		835FFC5D1E3405C40096D4C8 /* Main.storyboard */ = {
@@ -180,6 +263,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		835B50BC1E36ABE500F11668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CreditsExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditsExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CreditsExample.app/CreditsExample";
+			};
+			name = Debug;
+		};
+		835B50BD1E36ABE500F11668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CreditsExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditsExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CreditsExample.app/CreditsExample";
+			};
+			name = Release;
+		};
 		835FFC661E3405C40096D4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -298,6 +407,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		835B50BB1E36ABE500F11668 /* Build configuration list for PBXNativeTarget "CreditsExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835B50BC1E36ABE500F11668 /* Debug */,
+				835B50BD1E36ABE500F11668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		835FFC511E3405C40096D4C8 /* Build configuration list for PBXProject "CreditsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
