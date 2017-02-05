@@ -414,6 +414,7 @@
 				835B50BD1E36ABE500F11668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		835FFC511E3405C40096D4C8 /* Build configuration list for PBXProject "CreditsExample" */ = {
 			isa = XCConfigurationList;

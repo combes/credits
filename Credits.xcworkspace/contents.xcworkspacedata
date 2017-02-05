@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Example/CreditsExample/CreditsExample.xcodeproj">
+      location = "group:Credits.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Example/CreditsExample.xcodeproj">
    </FileRef>
 </Workspace>

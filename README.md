@@ -1,4 +1,3 @@
 # Credits
 A prototype experiment for incorporating third-party attributions.
-# Questions
-- How can this code be bundled for use as a module?
+This project is very much in flux and not ready for use just yet.
