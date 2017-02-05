@@ -9,5 +9,5 @@ Pod::Spec.new do |spec|
   spec.platform = :ios, "10.2"
   spec.requires_arc = true
   spec.source = { git: "https://github.com/combes/credits/Credits.git", tag: "v#{spec.version}", submodules: false }
-  spec.source_files = "Credits/**/*.{h,swift}"
+  spec.source_files = "Source/*.swift"
 end

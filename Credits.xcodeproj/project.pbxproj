@@ -10,6 +10,7 @@
 		832D59BA1E46AB5600304FBA /* Credits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832D59B01E46AB5600304FBA /* Credits.framework */; };
 		832D59CF1E46B91F00304FBA /* Credits.h in Headers */ = {isa = PBXBuildFile; fileRef = 832D59CD1E46B91F00304FBA /* Credits.h */; };
 		832D59EC1E46BDA000304FBA /* CreditsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D59D61E46BA4500304FBA /* CreditsTests.swift */; };
+		832D59F01E46BECD00304FBA /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D59EF1E46BECD00304FBA /* Blank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		832D59CD1E46B91F00304FBA /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Credits.h; path = Source/Credits.h; sourceTree = SOURCE_ROOT; };
 		832D59D61E46BA4500304FBA /* CreditsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsTests.swift; sourceTree = "<group>"; };
 		832D59D71E46BA4500304FBA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832D59EF1E46BECD00304FBA /* Blank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Blank.swift; path = Source/Blank.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				832D59D41E46B9F000304FBA /* Supporting Files */,
+				832D59EF1E46BECD00304FBA /* Blank.swift */,
 			);
 			name = Source;
 			path = Credits;
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832D59F01E46BECD00304FBA /* Blank.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +374,7 @@
 		832D59C81E46AB5600304FBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CreditsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -383,6 +388,7 @@
 		832D59C91E46AB5600304FBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CreditsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
