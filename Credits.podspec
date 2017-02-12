@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage = "https://github.com/combes/credits"
   s.license = { :type=> "MIT", :file => "LICENSE" }
   s.authors = { "Christopher Combes" => "ChristopherMichaelCombes@gmail.com" }
-  s.platform = :ios, "10.2"
+  s.platform = :ios, "10.0"
   s.requires_arc = true
   s.source = { :git => "https://github.com/combes/credits.git", :tag => "1.0.0" }
   s.source_files = "Source/*.swift"
