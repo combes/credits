@@ -14,6 +14,14 @@ public class CreditsViewController : UIViewController, WKUIDelegate {
     var webView: WKWebView!
     public var parser: LicenseParser?
     
+    public static func creditsViewController(parser: LicenseParser) -> CreditsViewController {
+        let frameworkBundle = Bundle(identifier: "com.credits")
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: frameworkBundle)
+        let controller = storyboard.instantiateViewController(withIdentifier: "storyboard") as! CreditsViewController
+        controller.parser = parser
+        return controller
+    }
+    
     override public func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
