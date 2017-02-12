@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "Credits"
-  spec.version = "1.0.0"
+  spec.version = "1.0.0-beta.1"
   spec.summary = "A framework for displaying third-party attributions in iOS projects."
   spec.homepage = "https://github.com/combes/credits"
   spec.license = { type: 'MIT', file: 'LICENSE' }
