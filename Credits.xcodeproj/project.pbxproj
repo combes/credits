@@ -16,6 +16,7 @@
 		832E65651E4FD94D00CE95A0 /* LicenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65641E4FD94D00CE95A0 /* LicenseParser.swift */; };
 		832E65661E4FD97B00CE95A0 /* LicenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65641E4FD94D00CE95A0 /* LicenseParser.swift */; };
 		832E656A1E4FE57D00CE95A0 /* CreditsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65691E4FE57D00CE95A0 /* CreditsTests.swift */; };
+		832E656E1E4FEB2D00CE95A0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 832E656D1E4FEB2D00CE95A0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		832E65621E4FD76B00CE95A0 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditsViewController.swift; path = Source/CreditsViewController.swift; sourceTree = SOURCE_ROOT; };
 		832E65641E4FD94D00CE95A0 /* LicenseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseParser.swift; path = Source/LicenseParser.swift; sourceTree = SOURCE_ROOT; };
 		832E65691E4FE57D00CE95A0 /* CreditsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsTests.swift; sourceTree = "<group>"; };
+		832E656D1E4FEB2D00CE95A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		832D59D41E46B9F000304FBA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				832E656D1E4FEB2D00CE95A0 /* README.md */,
 				832D59CC1E46B91F00304FBA /* Info.plist */,
 				832D59CD1E46B91F00304FBA /* Credits.h */,
 			);
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E656E1E4FEB2D00CE95A0 /* README.md in Sources */,
 				832E65651E4FD94D00CE95A0 /* LicenseParser.swift in Sources */,
 				832E65631E4FD76B00CE95A0 /* CreditsViewController.swift in Sources */,
 			);
