@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wto-wm-JSu">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wto-wm-JSu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="142" y="318" width="91" height="30"/>
                                 <state key="normal" title="Show Credits"/>
                                 <connections>
-                                    <segue destination="vbm-mX-HFf" kind="show" identifier="showCredits" id="PS9-nf-FmS"/>
+                                    <action selector="showCreditsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zCT-0f-cUf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,25 +40,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
-        </scene>
-        <!--Third Party Notices-->
-        <scene sceneID="OEj-od-V8x">
-            <objects>
-                <viewController title="Third Party Notices" id="vbm-mX-HFf" customClass="WebViewController" customModule="CreditsExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ch6-Ae-wbV"/>
-                        <viewControllerLayoutGuide type="bottom" id="7Lt-V4-49v"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gg8-UE-52H">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="01j-Mc-mUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1927" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LtQ-nG-bde">

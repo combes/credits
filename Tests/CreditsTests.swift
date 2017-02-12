@@ -1,13 +1,12 @@
 //
 //  CreditsTests.swift
-//  CreditsTests
+//  Credits
 //
-//  Created by Christopher Combes on 2/4/17.
+//  Created by Christopher Combes on 2/11/17.
 //  Copyright © 2017 Christopher Combes. All rights reserved.
 //
 
 import XCTest
-@testable import Credits
 
 class CreditsTests: XCTestCase {
     
@@ -21,16 +20,11 @@ class CreditsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testInit() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertNil(LicenseParser(licensePath: ""), "Empty license path should fail")
+        XCTAssertNil(LicenseParser(licensePath: "Bogus Path"), "Bogus license path should fail")
+        // TODO: Add passing test case with test license plist
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

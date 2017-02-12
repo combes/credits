@@ -13,24 +13,30 @@ enum ParseError: Error {
     case parse
 }
 
-class LicenseParser {
+open class LicenseParser {
+    static let titleKey = "title"
+    static let linkKey = "link"
+    static let contentKey = "content"
+    
     static let licensePlist = "licenses"
     static let licenseHTMLBodyFile = "license-body"
     static let licenseHTMLContentFile = "license-content"
     
-    private var plistFile: String?
     private var HTMLBodyFile: String?
     private var HTMLContentFile: String?
+    private var licensePath: String?
     private var licenseArray: NSArray?
+    private let frameworkBundle = Bundle(identifier: "com.credits")
     
     var htmlBody: String?
     
-    init?(licensePlist: String = LicenseParser.licensePlist,
-          licenseHTMLBodyFile: String = LicenseParser.licenseHTMLBodyFile,
-          licenseHTMLContentFile: String = LicenseParser.licenseHTMLContentFile) {
+    public init?(licensePath: String,
+                 licenseHTMLBodyFile: String = LicenseParser.licenseHTMLBodyFile,
+                 licenseHTMLContentFile: String = LicenseParser.licenseHTMLContentFile) {
         
-        if licensePlist.isEmpty || licenseHTMLBodyFile.isEmpty || licenseHTMLContentFile.isEmpty { return nil }
-        plistFile = licensePlist
+        if licensePath.isEmpty || licenseHTMLBodyFile.isEmpty || licenseHTMLContentFile.isEmpty { return nil }
+
+        self.licensePath = licensePath
         HTMLBodyFile = licenseHTMLBodyFile
         HTMLContentFile = licenseHTMLContentFile
         
@@ -42,21 +48,21 @@ class LicenseParser {
             return nil
         }
     }
-    
+
     private func loadLicenses() throws {
         // Load plist file in an array
-        guard let licensePath = Bundle.main.path(forResource: plistFile, ofType: "plist") else {
-            throw ParseError.load
-        }
         
-        licenseArray = NSArray(contentsOfFile: licensePath)
+        // TODO: Verify plist path
+        // throw ParseError.load
+        
+        licenseArray = NSArray(contentsOfFile: licensePath!)
         
         if licenseArray?.count == 0 { throw ParseError.parse }
     }
-    
+
     private func loadHTMLBody() throws {
         // Load HTML license body
-        guard let htmlPath = Bundle.main.path(forResource: HTMLBodyFile, ofType: "html") else {
+        guard let htmlPath = frameworkBundle?.path(forResource: HTMLBodyFile, ofType: "html") else {
             throw ParseError.load
         }
         
@@ -69,15 +75,14 @@ class LicenseParser {
         
         // For each license parse the title, link and content and build HTML content
         for license in licenseArray! {
-            // TODO: Can propertyList be used instead of parsing manually?
             let licenseDictionary = license as! [String:String]
             
-            let title = licenseDictionary["title"] ?? ""
-            let link = licenseDictionary["link"] ?? ""
-            let content = licenseDictionary["content"] ?? ""
+            let title = licenseDictionary[LicenseParser.titleKey] ?? ""
+            let link = licenseDictionary[LicenseParser.linkKey] ?? ""
+            let content = licenseDictionary[LicenseParser.contentKey] ?? ""
             
             // Load HTML content file for iteration through each license
-            guard let htmlPath = Bundle.main.path(forResource: "license-content", ofType: "html") else {
+            guard let htmlPath = frameworkBundle?.path(forResource: "license-content", ofType: "html") else {
                 throw ParseError.load
             }
             
@@ -108,7 +113,7 @@ class LicenseParser {
             htmlString = htmlString.replacingOccurrences(of: "$CONTENT", with: licenseBody)
             
             // Append contents for later usage
-            htmlContent += htmlString            
+            htmlContent += htmlString
         }
         
         // Replace the $CONTENT of license-body with full content for each license file

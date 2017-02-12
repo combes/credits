@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		832D59BA1E46AB5600304FBA /* Credits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832D59B01E46AB5600304FBA /* Credits.framework */; };
-		832D59CF1E46B91F00304FBA /* Credits.h in Headers */ = {isa = PBXBuildFile; fileRef = 832D59CD1E46B91F00304FBA /* Credits.h */; };
-		832D59EC1E46BDA000304FBA /* CreditsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D59D61E46BA4500304FBA /* CreditsTests.swift */; };
-		832D59F01E46BECD00304FBA /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D59EF1E46BECD00304FBA /* Blank.swift */; };
+		832D59CF1E46B91F00304FBA /* Credits.h in Headers */ = {isa = PBXBuildFile; fileRef = 832D59CD1E46B91F00304FBA /* Credits.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		832E655E1E4FD62600CE95A0 /* license-body.html in Resources */ = {isa = PBXBuildFile; fileRef = 832E655C1E4FD62600CE95A0 /* license-body.html */; };
+		832E655F1E4FD62600CE95A0 /* license-content.html in Resources */ = {isa = PBXBuildFile; fileRef = 832E655D1E4FD62600CE95A0 /* license-content.html */; };
+		832E65611E4FD67900CE95A0 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832E65601E4FD67900CE95A0 /* Storyboard.storyboard */; };
+		832E65631E4FD76B00CE95A0 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65621E4FD76B00CE95A0 /* CreditsViewController.swift */; };
+		832E65651E4FD94D00CE95A0 /* LicenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65641E4FD94D00CE95A0 /* LicenseParser.swift */; };
+		832E65661E4FD97B00CE95A0 /* LicenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65641E4FD94D00CE95A0 /* LicenseParser.swift */; };
+		832E656A1E4FE57D00CE95A0 /* CreditsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65691E4FE57D00CE95A0 /* CreditsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +33,13 @@
 		832D59B91E46AB5600304FBA /* CreditsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreditsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832D59CC1E46B91F00304FBA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 		832D59CD1E46B91F00304FBA /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Credits.h; path = Source/Credits.h; sourceTree = SOURCE_ROOT; };
-		832D59D61E46BA4500304FBA /* CreditsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsTests.swift; sourceTree = "<group>"; };
 		832D59D71E46BA4500304FBA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		832D59EF1E46BECD00304FBA /* Blank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Blank.swift; path = Source/Blank.swift; sourceTree = SOURCE_ROOT; };
+		832E655C1E4FD62600CE95A0 /* license-body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "license-body.html"; path = "Source/license-body.html"; sourceTree = SOURCE_ROOT; };
+		832E655D1E4FD62600CE95A0 /* license-content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "license-content.html"; path = "Source/license-content.html"; sourceTree = SOURCE_ROOT; };
+		832E65601E4FD67900CE95A0 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Source/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
+		832E65621E4FD76B00CE95A0 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditsViewController.swift; path = Source/CreditsViewController.swift; sourceTree = SOURCE_ROOT; };
+		832E65641E4FD94D00CE95A0 /* LicenseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseParser.swift; path = Source/LicenseParser.swift; sourceTree = SOURCE_ROOT; };
+		832E65691E4FE57D00CE95A0 /* CreditsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +82,10 @@
 		832D59B21E46AB5600304FBA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				832E655B1E4FD5D100CE95A0 /* Resources */,
 				832D59D41E46B9F000304FBA /* Supporting Files */,
-				832D59EF1E46BECD00304FBA /* Blank.swift */,
+				832E65641E4FD94D00CE95A0 /* LicenseParser.swift */,
+				832E65621E4FD76B00CE95A0 /* CreditsViewController.swift */,
 			);
 			name = Source;
 			path = Credits;
@@ -92,10 +103,20 @@
 		832D59D51E46BA4500304FBA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				832D59D61E46BA4500304FBA /* CreditsTests.swift */,
 				832D59D71E46BA4500304FBA /* Info.plist */,
+				832E65691E4FE57D00CE95A0 /* CreditsTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		832E655B1E4FD5D100CE95A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				832E655C1E4FD62600CE95A0 /* license-body.html */,
+				832E655D1E4FD62600CE95A0 /* license-content.html */,
+				832E65601E4FD67900CE95A0 /* Storyboard.storyboard */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +182,7 @@
 					832D59AF1E46AB5600304FBA = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					832D59B81E46AB5600304FBA = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -193,6 +214,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E655F1E4FD62600CE95A0 /* license-content.html in Resources */,
+				832E655E1E4FD62600CE95A0 /* license-body.html in Resources */,
+				832E65611E4FD67900CE95A0 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832D59F01E46BECD00304FBA /* Blank.swift in Sources */,
+				832E65651E4FD94D00CE95A0 /* LicenseParser.swift in Sources */,
+				832E65631E4FD76B00CE95A0 /* CreditsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832D59EC1E46BDA000304FBA /* CreditsTests.swift in Sources */,
+				832E656A1E4FE57D00CE95A0 /* CreditsTests.swift in Sources */,
+				832E65661E4FD97B00CE95A0 /* LicenseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,17 +364,19 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.christophercombes.Credits;
+				PRODUCT_BUNDLE_IDENTIFIER = com.credits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = YES;
 			};
 			name = Debug;
 		};
@@ -358,16 +386,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.christophercombes.Credits;
+				PRODUCT_BUNDLE_IDENTIFIER = com.credits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = YES;
 			};
 			name = Release;
 		};
@@ -376,9 +406,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = CreditsTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.christophercombes.CreditsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CreditsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -390,9 +420,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = CreditsTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.christophercombes.CreditsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CreditsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
