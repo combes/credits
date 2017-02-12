@@ -1,10 +1,10 @@
 # Credits
-A prototype experiment for incorporating third-party attributions.
+A simple way to display third-party attributions in an iOS project.
 # Status
 Almost ready for use.
 # TODO
-* Prepare and test CocoaPod usage within an external test project
-* Consider an icon to represent
+* Test creating a new project incorporating this CocoaPod.
+* Cleanup README.md. Installation, etc.
 # Example
 See the included example for how to instantiate, but this is a simple example:
 ```
@@ -57,3 +57,5 @@ $CONTENT <!-- Wrap each license in <p></p> for proper formatting -->
 `$TITLE` is replaced by the title of the third-party project.
 `$LINK` is a link to whereever the project is (e.g. GitHub).
 `$CONTENT` is the license file content.
+# License
+Credits is released under the MIT license. See LICENSE for details.
