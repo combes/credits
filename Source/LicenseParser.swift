@@ -37,6 +37,7 @@ open class LicenseParser {
         if licensePath.isEmpty || licenseHTMLBodyFile.isEmpty || licenseHTMLContentFile.isEmpty { return nil }
 
         self.licensePath = licensePath
+        
         HTMLBodyFile = licenseHTMLBodyFile
         HTMLContentFile = licenseHTMLContentFile
         
@@ -52,10 +53,11 @@ open class LicenseParser {
     private func loadLicenses() throws {
         // Load plist file in an array
         
-        // TODO: Verify plist path
-        // throw ParseError.load
+        guard let array = NSArray(contentsOfFile: licensePath!) else {
+            throw ParseError.load
+        }
         
-        licenseArray = NSArray(contentsOfFile: licensePath!)
+        licenseArray = array
         
         if licenseArray?.count == 0 { throw ParseError.parse }
     }

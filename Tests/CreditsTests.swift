@@ -25,6 +25,13 @@ class CreditsTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCTAssertNil(LicenseParser(licensePath: ""), "Empty license path should fail")
         XCTAssertNil(LicenseParser(licensePath: "Bogus Path"), "Bogus license path should fail")
-        // TODO: Add passing test case with test license plist
+        
+        // Load a valid license test file
+        guard let path = Bundle(for: CreditsTests.classForCoder()).path(forResource: "licenses-test", ofType: "plist") else {
+            XCTFail("Could not find licenses test file")
+            return
+        }
+        
+        XCTAssertNotNil(LicenseParser(licensePath: path))
     }
 }

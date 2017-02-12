@@ -16,7 +16,8 @@
 		832E65651E4FD94D00CE95A0 /* LicenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65641E4FD94D00CE95A0 /* LicenseParser.swift */; };
 		832E65661E4FD97B00CE95A0 /* LicenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65641E4FD94D00CE95A0 /* LicenseParser.swift */; };
 		832E656A1E4FE57D00CE95A0 /* CreditsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832E65691E4FE57D00CE95A0 /* CreditsTests.swift */; };
-		832E656E1E4FEB2D00CE95A0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 832E656D1E4FEB2D00CE95A0 /* README.md */; };
+		832E65751E5030B000CE95A0 /* licenses-test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832E65741E5030B000CE95A0 /* licenses-test.plist */; };
+		832E65771E5031D500CE95A0 /* licenses-test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832E65741E5030B000CE95A0 /* licenses-test.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		832E65641E4FD94D00CE95A0 /* LicenseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseParser.swift; path = Source/LicenseParser.swift; sourceTree = SOURCE_ROOT; };
 		832E65691E4FE57D00CE95A0 /* CreditsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsTests.swift; sourceTree = "<group>"; };
 		832E656D1E4FEB2D00CE95A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		832E65741E5030B000CE95A0 /* licenses-test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "licenses-test.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				832D59D71E46BA4500304FBA /* Info.plist */,
 				832E65691E4FE57D00CE95A0 /* CreditsTests.swift */,
+				832E65741E5030B000CE95A0 /* licenses-test.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E65751E5030B000CE95A0 /* licenses-test.plist in Resources */,
 				832E655F1E4FD62600CE95A0 /* license-content.html in Resources */,
 				832E655E1E4FD62600CE95A0 /* license-body.html in Resources */,
 				832E65611E4FD67900CE95A0 /* Storyboard.storyboard in Resources */,
@@ -227,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832E65771E5031D500CE95A0 /* licenses-test.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832E656E1E4FEB2D00CE95A0 /* README.md in Sources */,
 				832E65651E4FD94D00CE95A0 /* LicenseParser.swift in Sources */,
 				832E65631E4FD76B00CE95A0 /* CreditsViewController.swift in Sources */,
 			);
