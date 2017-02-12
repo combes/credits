@@ -3,8 +3,6 @@ A prototype experiment for incorporating third-party attributions.
 # Status
 Almost ready for use.
 # TODO
-* Document the framework
-* Cleanup TODO items within framework code
 * Prepare and test CocoaPod usage within an external test project
 * Consider an icon to represent
 # Example
@@ -17,6 +15,25 @@ let parser = LicenseParser(licensePath: licensePath!)
 // Create a new Credits view controller
 let controller = CreditsViewController.creditsViewController(parser: parser!)
 present(controller, animated: true, completion: nil)
+```
+# License Property List Format
+The license file must be a Property List using the following format:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+<dict>
+<key>title</key>
+<string>SomeThirdPartyLibraryTitle</string>
+<key>link</key>
+<string>https://github.com/SomeThirdPartyLibraryTitle</string>
+<key>content</key>
+<string>Copyright (c) 2014-2016... (rest of license contents)
+</string>
+</dict>
+</array>
+</plist>
 ```
 # Custom HTML
 You can load custom body and content HTML for display in the web view as follows:

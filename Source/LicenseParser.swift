@@ -30,6 +30,12 @@ open class LicenseParser {
     
     var htmlBody: String?
     
+    /**
+     Initializes a `LicenseParser`.
+     
+     - Parameter licensePath: The path to the license plist file.
+     - Returns: A new LicenseParser if it succeeds and `nil` if it fails.
+     */
     convenience public init?(licensePath: String) {
         guard let bodyPath = LicenseParser.frameworkBundle?.path(forResource: LicenseParser.licenseHTMLBodyFile, ofType: "html") else {
             return nil
@@ -40,6 +46,14 @@ open class LicenseParser {
         self.init(licensePath: licensePath, licenseHTMLBodyPath: bodyPath, licenseHTMLContentPath: contentPath)
     }
     
+    /**
+     Initializes a `LicenseParser`.
+     
+     - Parameter licensePath: The path to the license plist file.
+     - Parameter licenseHTMLBodyPath: The path to an HTML body file.
+     - Parameter licenseHTMLContentPath: The path to an HTML content file.
+     - Returns: A new LicenseParser if it succeeds and `nil` if it fails.
+     */
     public init?(licensePath: String,
                  licenseHTMLBodyPath: String,
                  licenseHTMLContentPath: String) {

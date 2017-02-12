@@ -14,6 +14,12 @@ public class CreditsViewController : UIViewController, WKUIDelegate {
     var webView: WKWebView!
     public var parser: LicenseParser?
     
+    /**
+     Instantiate a `CreditsViewController` for display using a `LicenseParser`.
+     
+     - Parameter parser: The `LicenseParser` to use.
+     - Returns: A new `CreditsViewController`.
+     */
     public static func creditsViewController(parser: LicenseParser) -> CreditsViewController {
         let frameworkBundle = Bundle(identifier: "com.credits")
         let storyboard = UIStoryboard(name: "Storyboard", bundle: frameworkBundle)
