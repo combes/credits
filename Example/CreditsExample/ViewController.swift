@@ -30,6 +30,4 @@ class ViewController: UIViewController {
         let navigationController = UINavigationController(rootViewController: controller)
         self.present(navigationController, animated: true, completion: nil)
     }
-    
-    // TODO: Provide example of custom HTML license body and content.
 }

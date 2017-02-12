@@ -21,25 +21,34 @@ open class LicenseParser {
     static let licensePlist = "licenses"
     static let licenseHTMLBodyFile = "license-body"
     static let licenseHTMLContentFile = "license-content"
+    static let frameworkBundle = Bundle(identifier: "com.credits")
     
-    private var HTMLBodyFile: String?
-    private var HTMLContentFile: String?
+    private var HTMLBodyPath: String?
+    private var HTMLContentPath: String?
     private var licensePath: String?
     private var licenseArray: NSArray?
-    private let frameworkBundle = Bundle(identifier: "com.credits")
     
     var htmlBody: String?
     
+    convenience public init?(licensePath: String) {
+        guard let bodyPath = LicenseParser.frameworkBundle?.path(forResource: LicenseParser.licenseHTMLBodyFile, ofType: "html") else {
+            return nil
+        }
+        guard let contentPath = LicenseParser.frameworkBundle?.path(forResource: LicenseParser.licenseHTMLContentFile, ofType: "html") else {
+            return nil
+        }
+        self.init(licensePath: licensePath, licenseHTMLBodyPath: bodyPath, licenseHTMLContentPath: contentPath)
+    }
+    
     public init?(licensePath: String,
-                 licenseHTMLBodyFile: String = LicenseParser.licenseHTMLBodyFile,
-                 licenseHTMLContentFile: String = LicenseParser.licenseHTMLContentFile) {
+                 licenseHTMLBodyPath: String,
+                 licenseHTMLContentPath: String) {
         
-        if licensePath.isEmpty || licenseHTMLBodyFile.isEmpty || licenseHTMLContentFile.isEmpty { return nil }
-
+        if licensePath.isEmpty || licenseHTMLBodyPath.isEmpty || licenseHTMLContentPath.isEmpty { return nil }
+        
+        HTMLBodyPath = licenseHTMLBodyPath
+        HTMLContentPath = licenseHTMLContentPath
         self.licensePath = licensePath
-        
-        HTMLBodyFile = licenseHTMLBodyFile
-        HTMLContentFile = licenseHTMLContentFile
         
         do {
             try loadLicenses()
@@ -49,7 +58,7 @@ open class LicenseParser {
             return nil
         }
     }
-
+    
     private func loadLicenses() throws {
         // Load plist file in an array
         
@@ -61,14 +70,10 @@ open class LicenseParser {
         
         if licenseArray?.count == 0 { throw ParseError.parse }
     }
-
+    
     private func loadHTMLBody() throws {
         // Load HTML license body
-        guard let htmlPath = frameworkBundle?.path(forResource: HTMLBodyFile, ofType: "html") else {
-            throw ParseError.load
-        }
-        
-        htmlBody = try String(contentsOfFile: htmlPath, encoding: String.Encoding.utf8)
+        htmlBody = try String(contentsOfFile: HTMLBodyPath!, encoding: String.Encoding.utf8)
     }
     
     private func buildHTMLContent() throws {
@@ -84,12 +89,9 @@ open class LicenseParser {
             let content = licenseDictionary[LicenseParser.contentKey] ?? ""
             
             // Load HTML content file for iteration through each license
-            guard let htmlPath = frameworkBundle?.path(forResource: "license-content", ofType: "html") else {
-                throw ParseError.load
-            }
+            var htmlString = try String(contentsOfFile: HTMLContentPath!, encoding: String.Encoding.utf8)
             
             // Parse title and link attributes
-            var htmlString = try String(contentsOfFile: htmlPath, encoding: String.Encoding.utf8)
             htmlString = htmlString.replacingOccurrences(of: "$TITLE", with: title)
             htmlString = htmlString.replacingOccurrences(of: "$LINK", with: link)
             
