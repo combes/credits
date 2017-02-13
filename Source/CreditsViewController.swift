@@ -21,7 +21,7 @@ public class CreditsViewController : UIViewController, WKUIDelegate {
      - Returns: A new `CreditsViewController`.
      */
     public static func creditsViewController(parser: LicenseParser) -> CreditsViewController {
-        let frameworkBundle = Bundle(identifier: "com.credits")
+        let frameworkBundle = Bundle(for: type(of: CreditsViewController()))
         let storyboard = UIStoryboard(name: "Storyboard", bundle: frameworkBundle)
         let controller = storyboard.instantiateViewController(withIdentifier: "storyboard") as! CreditsViewController
         controller.parser = parser
