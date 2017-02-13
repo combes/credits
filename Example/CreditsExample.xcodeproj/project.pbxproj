@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		830BEB381E3551B1005659A0 /* licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 830BEB371E3551B1005659A0 /* licenses.plist */; };
 		832E65671E4FDABF00CE95A0 /* Credits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E65561E4FD3BB00CE95A0 /* Credits.framework */; };
+		835AE11B1E513C8D00E1DCFE /* Credits.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 832E65561E4FD3BB00CE95A0 /* Credits.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		835FFC5A1E3405C40096D4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835FFC591E3405C40096D4C8 /* AppDelegate.swift */; };
 		835FFC5C1E3405C40096D4C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835FFC5B1E3405C40096D4C8 /* ViewController.swift */; };
 		835FFC5F1E3405C40096D4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835FFC5D1E3405C40096D4C8 /* Main.storyboard */; };
@@ -39,6 +40,19 @@
 			remoteInfo = Credits;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		835AE11A1E513C7500E1DCFE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				835AE11B1E513C8D00E1DCFE /* Credits.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		830BEB371E3551B1005659A0 /* licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = licenses.plist; sourceTree = "<group>"; };
@@ -115,6 +129,7 @@
 				835FFC521E3405C40096D4C8 /* Sources */,
 				835FFC531E3405C40096D4C8 /* Frameworks */,
 				835FFC541E3405C40096D4C8 /* Resources */,
+				835AE11A1E513C7500E1DCFE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -138,6 +153,7 @@
 				TargetAttributes = {
 					835FFC551E3405C40096D4C8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2MX95JUKKX;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -332,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2MX95JUKKX;
 				INFOPLIST_FILE = CreditsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditsExample;
@@ -345,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2MX95JUKKX;
 				INFOPLIST_FILE = CreditsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CreditsExample;

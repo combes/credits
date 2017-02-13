@@ -1,8 +1,7 @@
 # Credits
 A simple way to display third-party attributions in an iOS project.
 
-# Status
-Almost ready for use.
+![Animated gif](Screenshots/animated_example.gif "Animation showing example")
 
 ## Installation
 
@@ -29,6 +28,9 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+Be sure to add a "Copy Framework" step in Xcode > Project > Target > Build Phases
+![alt text](https://github.com/combes/credits/raw/master/Screenshots/copy_framework_step.png "Copying framework")
+
 # Example
 See the included example for how to instantiate, but this is a simple example:
 ```swift
