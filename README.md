@@ -1,13 +1,37 @@
 # Credits
 A simple way to display third-party attributions in an iOS project.
+
 # Status
 Almost ready for use.
-# TODO
-* Test creating a new project incorporating this CocoaPod.
-* Cleanup README.md. Installation, etc.
+
+## Installation
+
+### CocoaPods
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate Credits into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+pod 'Credits', :git => 'https://github.com/combes/credits', :tag => '1.0.0'
+end
+```
+Then, run the following command:
+
+```bash
+$ pod install
+```
 # Example
 See the included example for how to instantiate, but this is a simple example:
-```
+```swift
 // Load plist file in an array for the parser to use
 let licensePath = Bundle.main.path(forResource: "licenses", ofType: "plist")
 // Create a new license parser
@@ -18,7 +42,7 @@ present(controller, animated: true, completion: nil)
 ```
 # License Property List Format
 The license file must be a Property List using the following format:
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -37,7 +61,7 @@ The license file must be a Property List using the following format:
 ```
 # Custom HTML
 You can load custom body and content HTML for display in the web view as follows:
-```
+```html
 // Custom body and content HTML
 let bodyHTMLPath = Bundle.main.path(forResource: "license-body", ofType: "html")
 let contentHTMLPath = Bundle.main.path(forResource: "license-content", ofType: "html")
