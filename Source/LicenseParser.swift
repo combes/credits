@@ -21,7 +21,6 @@ open class LicenseParser {
     static let licensePlist = "licenses"
     static let licenseHTMLBodyFile = "license-body"
     static let licenseHTMLContentFile = "license-content"
-    static let frameworkBundle = Bundle(identifier: "com.credits")
     
     private var HTMLBodyPath: String?
     private var HTMLContentPath: String?
@@ -37,10 +36,10 @@ open class LicenseParser {
      - Returns: A new LicenseParser if it succeeds and `nil` if it fails.
      */
     convenience public init?(licensePath: String) {
-        guard let bodyPath = LicenseParser.frameworkBundle?.path(forResource: LicenseParser.licenseHTMLBodyFile, ofType: "html") else {
+        guard let bodyPath = Bundle(for: type(of: self)).path(forResource: LicenseParser.licenseHTMLBodyFile, ofType: "html") else {
             return nil
         }
-        guard let contentPath = LicenseParser.frameworkBundle?.path(forResource: LicenseParser.licenseHTMLContentFile, ofType: "html") else {
+        guard let contentPath = Bundle(for: type(of: self)).path(forResource: LicenseParser.licenseHTMLContentFile, ofType: "html") else {
             return nil
         }
         self.init(licensePath: licensePath, licenseHTMLBodyPath: bodyPath, licenseHTMLContentPath: contentPath)

@@ -10,4 +10,7 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/combes/credits.git", :tag => "1.0.0" }
   s.source_files = "Source/*.swift"
   s.resources = "Source/*.{html,storyboard}"
+  s.resource_bundles = {
+	'Credits' => ['Source/*.{html,storyboard}']
+  }
 end
