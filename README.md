@@ -81,7 +81,10 @@ $CONTENT <!-- Wrap each license in <p></p> for proper formatting -->
 </div>
 ```
 `$TITLE` is replaced by the title of the third-party project.
+
 `$LINK` is a link to whereever the project is (e.g. GitHub).
+
 `$CONTENT` is the license file content.
+
 # License
 Credits is released under the MIT license. See LICENSE for details.
