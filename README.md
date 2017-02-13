@@ -77,8 +77,20 @@ let contentHTMLPath = Bundle.main.path(forResource: "license-content", ofType: "
 let parser = LicenseParser(licensePath: licensePath, licenseHTMLBodyPath: bodyHTMLPath, licenseHTMLContentPath: contentHTMLPath)
 ```
 The body HTML must contain the flagged variable `$CONTENT` which is replaced by the parsed license file content.
-The content HTML (for each individual license) contains three flags as shown in the example:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div>
+The following sets forth attribution notices for third party software that may be contained in portions of this product.
+</div>
+$CONTENT
+</body>
+</html>
+
 ```
+The content HTML (for each individual license) contains three flags as shown in the example:
+```html
 <div class="license-title">
 $TITLE
 <div class="license-link">$LINK</div>
