@@ -61,6 +61,13 @@ The license file must be a Property List using the following format:
 </array>
 </plist>
 ```
+
+`title` is replaced by the title of the third-party project.
+
+`link` is a link to whereever the project is (e.g. GitHub).
+
+`content` is the license file content.
+
 # Custom HTML
 You can load custom body and content HTML for display in the web view as follows:
 ```html
