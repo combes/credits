@@ -9,7 +9,7 @@
 import Foundation
 import WebKit
 
-public class CreditsViewController : UIViewController, WKUIDelegate {
+public class CreditsViewController : UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
     public var parser: LicenseParser?
@@ -31,7 +31,7 @@ public class CreditsViewController : UIViewController, WKUIDelegate {
     override public func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
+        webView.navigationDelegate = self
         view = webView
     }
     
@@ -51,5 +51,14 @@ public class CreditsViewController : UIViewController, WKUIDelegate {
     
     func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: WKNavigationDelegate
+    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // The following code is used to scroll the web view to the top on larger devices.
+        // This may be an issue with iOS 10.3 as this issue was not apparent in iOS 10.2.
+        // Scroll window to top
+        let script = "window.scrollTo(0, -200)"
+        webView.evaluateJavaScript(script, completionHandler: nil)
     }
 }
