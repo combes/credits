@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "Credits"
-  s.version = "1.0.0"
+  s.version = "1.0.1"
   s.summary = "A framework for displaying third-party attributions in iOS projects."
   s.homepage = "https://github.com/combes/credits"
   s.license = { :type=> "MIT", :file => "LICENSE" }
