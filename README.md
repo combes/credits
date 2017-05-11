@@ -20,7 +20,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-pod 'Credits', :git => 'https://github.com/combes/credits', :tag => '1.0.0'
+pod 'Credits'
 end
 ```
 Then, run the following command:
