@@ -49,7 +49,7 @@ public class CreditsViewController : UIViewController, WKNavigationDelegate {
         webView.loadHTMLString((parser?.htmlBody!)!, baseURL: nil)
     }
     
-    func cancel(_ sender: Any) {
+    @objc func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
